@@ -339,4 +339,14 @@ function preloadImages() {
 }
 
 // Запускаем предзагрузку
+
 window.addEventListener('load', preloadImages);
+
+// Автоматически добавляет тег base для правильной работы на GitHub Pages
+(function() {
+  if (!document.querySelector('base')) {
+    var base = document.createElement('base');
+    base.href = 'https://olegkocsky-creator.github.io/elenasolomennikova/';
+    document.head.insertBefore(base, document.head.firstChild);
+  }
+})();
